@@ -1,5 +1,5 @@
 import axios from "axios";
-import { counter } from "@/utils/counter";
+import { counter } from "../utils/counter";
 import dotenv from "dotenv";
 
 dotenv.config()

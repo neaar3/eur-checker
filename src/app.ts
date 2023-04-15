@@ -1,7 +1,7 @@
 
 import express, {Request, Response} from "express";
 import cors from "cors";
-import { changeSmallestValue, checkCurrencyValue } from "@/controllers/exchange";
+import { changeSmallestValue, checkCurrencyValue } from "./controllers/exchange";
 
 const app = express();
 app

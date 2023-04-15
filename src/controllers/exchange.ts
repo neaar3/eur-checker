@@ -1,7 +1,7 @@
-import instance from "@/services/api"
-import { sendText } from "@/services/sms";
-import { ApiLayerLiveResult, Quote } from "@/types/types";
-import { counter } from "@/utils/counter";
+import instance from "../services/api"
+import { sendText } from "../services/sms";
+import { ApiLayerLiveResult, Quote } from "../types/types";
+import { counter } from "../utils/counter";
 import { Request, Response } from "express";
 
 const TEN_MINUTES_IN_MILISSECONDS = 600000;

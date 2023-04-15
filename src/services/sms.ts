@@ -1,6 +1,6 @@
 import twilio, { Twilio } from 'twilio';
 import dotenv from "dotenv";
-import { Phone } from '@/types/types';
+import { Phone } from '../types/types';
 
 dotenv.config()
 
