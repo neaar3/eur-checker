@@ -4,7 +4,7 @@ import { Phone } from '../types/types';
 
 dotenv.config()
 
-export async function sendText(value: number) {
+export async function sendText(value: number, currentValue: number) {
     const phoneNumbers = [parseInt(process.env.THAU_PHONE_NUMBER), parseInt(process.env.IAGO_PHONE_NUMBER)]    
     const clientIago = twilio(process.env.TWILIO_ACCOUNT_SID_IAGO, process.env.TWILIO_AUTH_TOKEN_IAGO);
     const clientThauan = twilio(process.env.TWILIO_ACCOUNT_SID_THAU, process.env.TWILIO_AUTH_TOKEN_THAU);
@@ -18,7 +18,7 @@ export async function sendText(value: number) {
         }
     
         const textContent = {
-            body: `Euro <> Real update: EUR 1.0000 currently is BRL ${value}`,
+            body: `Euro <> Real update: EUR 1.00 currently is BRL ${value}. The smallest value now to comparassion is BRL ${currentValue}.`,
             to: `+${phoneNumber}`,
             from: Phone.IAGO == phoneNumber ? process.env.TWILIO_PHONE_NUMBER_IAGO : process.env.TWILIO_PHONE_NUMBER_THAU,
         }
